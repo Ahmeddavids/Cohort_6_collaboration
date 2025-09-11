@@ -20,3 +20,38 @@ exports.createSchool = async (req,res) => {
         })
     }
 }
+
+exports.getOneSchool = async (req,res)=>{
+    try {
+        const {id} = req.params
+        const school = await schoolModel.findById(id);
+
+        if (!school) {
+           return res.status(404).json({
+            message:"school does not exist"
+           }) 
+        }
+        res.status(200).json({
+            message:"successful",
+            data:school
+        })
+    } catch (error) {
+     res.status(500).json({
+        message:error.message
+     })   
+    }
+}
+
+exports.getAllSchool = async (req,res)=>{
+    try {
+        const school = await schoolModel.find()
+        res.status(200).json({
+            message:"get all school",
+            data:school
+        })
+    } catch (error) {
+       res.status(500).json({
+        message:error.message
+       }) 
+    }
+}
