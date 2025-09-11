@@ -98,7 +98,7 @@ exports.deleteSchool = async (req, res) => {
             });
         }
 
-        await school.findByIdAndDelete();
+        await school.findByIdAndDelete(id);
 
         res.status(200).json({
             message: "School info deleted successfully"
