@@ -44,7 +44,7 @@ exports.getOneSchool = async (req,res)=>{
 
 exports.getAllSchool = async (req,res)=>{
     try {
-        const school = await schoolModel.findById()
+        const school = await schoolModel.find()
         res.status(200).json({
             message:"get all school",
             data:school
