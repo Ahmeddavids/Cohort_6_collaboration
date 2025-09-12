@@ -4,16 +4,25 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "dotenv": "^17.2.2",
     "express": "^5.1.0",
     "mongoose": "^8.18.1",
     "nodemon": "^3.1.10"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ahmeddavids/Cohort_6_collaboration.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ahmeddavids/Cohort_6_collaboration/issues"
+  },
+  "homepage": "https://github.com/Ahmeddavids/Cohort_6_collaboration#readme",
+  "description": ""
 }
